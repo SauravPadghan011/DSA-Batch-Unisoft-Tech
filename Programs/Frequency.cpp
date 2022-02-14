@@ -18,11 +18,15 @@ int Search(int arr[], int key, int left, int right) {
     return -1;
 }
 
+
 int main() {
 
-    int size = 13;
-    int arr[size] = {1,1,2,2,2,2,4,4,5,5,6,10,10};
+    // int size = 13;
+    // int arr[size] = {1,1,2,2,2,2,4,4,5,5,6,10,10};
     // int arr[13] = {1,2,3,4,5,6,7,8,9,10,11,12,13};
+
+    int size = 6;
+    int arr[size] = {1,1,1,2,2,3};
     
     int tempPrint = 0;
     for(int i=0; i<size; i++) {
@@ -49,4 +53,5 @@ int main() {
         }
     }
     return 0;
+    
 }
