@@ -1,7 +1,7 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-class Node{
+class Node {
     public:
         int data;
         Node *next;
@@ -14,11 +14,23 @@ class Node{
 
 Node *head = NULL;
 
-void InsertAtHead(int val) {
-    
-    Node *node = new Node(val);
+void InsertAtStart(int val){
+    Node *newNode = new Node(val);
+
     if(head == NULL) {
-        head = node;
+        head = newNode;
+        return;
+    }
+
+    newNode->next = head;
+    head = newNode;
+}
+
+void InsertAtEnd(int val) {
+    Node *newNode = new Node(val);
+
+    if(head == NULL) {
+        head = newNode;
         return;
     }
 
@@ -26,7 +38,29 @@ void InsertAtHead(int val) {
     while(temp->next != NULL) {
         temp = temp->next;
     }
-    temp->next = node;
+    temp->next = newNode;
+}
+
+void InsertAtPos(int val, int pos) {
+
+    if(pos == 1) {
+        InsertAtStart(val);
+        return;
+    }
+
+    Node *newNode = new Node(val);
+
+
+
+    Node *temp = head;
+    int i=0;
+    while(i < pos-2) {
+        temp = temp->next;
+        i++;
+    }
+
+    newNode->next = temp->next;
+    temp->next = newNode;
 }
 
 void Display() {
@@ -35,13 +69,22 @@ void Display() {
         cout << temp->data << " ";
         temp = temp->next;
     }
+    cout << temp->data << " ";
 }
+
 
 int main() {
 
-    InsertAtHead(1);
-    InsertAtHead(2);
-    InsertAtHead(3);
+    InsertAtEnd(10);
+    InsertAtEnd(20);
+    InsertAtEnd(30);
+    InsertAtEnd(40);
+    InsertAtEnd(50);
+
+    InsertAtStart(60);
+    InsertAtStart(70);
+
+    InsertAtPos(100,1);
 
     Display();
 
