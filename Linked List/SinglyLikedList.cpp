@@ -50,11 +50,9 @@ void InsertAtPos(int val, int pos) {
 
     Node *newNode = new Node(val);
 
-
-
     Node *temp = head;
-    int i=0;
-    while(i < pos-2) {
+    int i=1;
+    while(i < pos-1) {
         temp = temp->next;
         i++;
     }
@@ -65,11 +63,10 @@ void InsertAtPos(int val, int pos) {
 
 void Display() {
     Node *temp = head;
-    while(temp->next != NULL) {
+    while(temp != NULL) {
         cout << temp->data << " ";
         temp = temp->next;
     }
-    cout << temp->data << " ";
 }
 
 
