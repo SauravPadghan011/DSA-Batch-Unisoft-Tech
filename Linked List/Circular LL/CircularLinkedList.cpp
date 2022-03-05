@@ -63,11 +63,19 @@ void Display() {
      * Print the Linked list with the help 
      * of no. of count of elements in the linked list
     */
-    cout << "Linked List (with count): ";
-    for(int i=0; i<count; i++) {
-        cout << temp->data << " ";
-        temp = temp->next;
-    }
+    // cout << "Linked List (with count): ";
+    // for(int i=0; i<count; i++) {
+    //     cout << temp->data << " ";
+    //     temp = temp->next;
+    // }
+}
+
+void addStart(int data) {
+    Node *newNode = new Node(data);
+
+    newNode->next = head;
+    head = newNode;
+    last->next = newNode;
 }
 
 int main() {
@@ -78,6 +86,9 @@ int main() {
     add(4);
     add(5);
     add(6);
+
+    addStart(7);
+    addStart(8);
 
     Display();
 
