@@ -29,7 +29,8 @@ int main() {
     int arr[size] = {1,1,1,2,2,3};
     
     int tempPrint = 0;
-    for(int i=0; i<size; i++) {
+    for(int i=0, j=0; i<size, j<size; i++,j++) {
+        cout << j << " ";
         if(arr[i] == arr[i+1]) {
             int temp = arr[i];
             arr[i] = 0;
