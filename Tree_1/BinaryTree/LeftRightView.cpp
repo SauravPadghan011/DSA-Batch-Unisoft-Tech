@@ -86,7 +86,7 @@ int main() {
 
     cout << "Left View of Tree: ";
     leftView(root); cout << endl;
-    cout << "Right View of Tree";
+    cout << "Right View of Tree: ";
     rightView(root); cout << endl;
 
     return 0;
