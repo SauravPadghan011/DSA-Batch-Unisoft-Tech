@@ -42,9 +42,6 @@ int main() {
    
     dequeue();
     dequeue();
-    dequeue();
-    dequeue();
-    dequeue();dequeue();dequeue();
 
     display();
 
