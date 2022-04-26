@@ -6,7 +6,7 @@ int Search(int arr[], int key, int size) {
     int low = 0;
     int high = size-1;
     while (low <= high) {
-        int mid = low + (high-low)/2;
+        int mid = (high+low)/2;
     
         if(arr[mid] == key)
             return mid;
@@ -22,6 +22,7 @@ int Search(int arr[], int key, int size) {
 int main() {
 
     // Take array size as a input
+    cout << SIZE_MAX;
     int size;
     cout << "Enter the size of Array: ";
     cin >> size;
@@ -29,8 +30,9 @@ int main() {
     // Take array element from user
     int arr[size];
     for(int i=0; i<size; i++) {
-        cout << "Element " << i+1 << ": ";
-        cin >> arr[i];
+        // cout << "Element " << i+1 << ": ";
+        // cin >> arr[i];
+        arr[i] = i+1;
     }
 
     // Enter the element you need to find
